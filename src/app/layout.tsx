@@ -3,10 +3,19 @@ import './globals.css';
 
 import { SidebarProvider } from '@/context/SidebarContext';
 import { ThemeProvider } from '@/context/ThemeContext';
+import type { Metadata } from 'next';
 
 const outfit = Outfit({
   subsets: ["latin"],
 });
+
+export const metadata: Metadata = {
+  title: 'Admin Dashboard',
+  description: 'Admin Dashboard Application',
+  icons: {
+    icon: '/images/favicon.ico',
+  },
+};
 
 export default function RootLayout({
   children,
